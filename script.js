@@ -1,9 +1,10 @@
 $(document).ready(function() {
 
+$("img").hide();
 
-console.log("hello");
-
-
+$("td").click(function () {
+  $(this).find("img").show();
+});
 
 
 
