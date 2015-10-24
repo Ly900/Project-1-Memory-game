@@ -15,11 +15,11 @@ table {
 }
 
 tr {
-  border: solid 1px black; 
+  border: solid 1px black;
 }
 
 td {
   width: 25%;
-  height: 100px;
+  height: 150px;
   border: solid 1px black;
 }
