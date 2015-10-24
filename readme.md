@@ -7,29 +7,49 @@
 4. If the pictures do not match, the pictures will flip over and you can try again to find another two matching pair.
 5. At the end, you will be given the number of total clicks it took you to finish the game.
 
-##PseudoCode
-*1. Make a 4 x 4 empty table.*
-- Attach   
-
-
-
-
-
-
-
-
-
-##User Stories:
+##User Stories
 As a user, I should be able to...
 
 * click on a card and have a picture pop up so I can see what my first card is.
+
 * click on a second card and have a picture pop up so I can see what my second card is.
+
 * see my matching cards automatically disappear so I could know that I've made a match.
+
 * tell the difference between an available card I can click and an empty spot
+
 * see my cards that do not match flip over again.
+
 * click on a card that was clicked before but was not matched so that I can try to match it again.
+
 * see a tally at the end with the number of clicks it took me to win the game.
 
+* click a button to see reset the board so I can play again.
+
+##PseudoCode
+* Make a 4 x 4 empty table.
+
+* Attach a hidden picture to each cell.  
+
+* Add a click event to each cell so that it shows the picture when it is clicked on.
+
+* If two pictures match, the pictures are hidden again.
+
+* Remove click capability from cells that already had matched pictures.
+
+* If the two pictures do not match, the cards should be hidden again.
+
+* The player should not be able to click on these cells again.
+
+* Once there are no cards left, the player should receive a message that the game is over.
+
+* A counter shown on the page should let the player know how many clicks it took him/her to win the game.     
+
+##Other To Do Items
+
+* Run code through HTML and CSS through validators
+
+* Figure out Github pages and how to host, push page, etc.
 
 
 
