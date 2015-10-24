@@ -26,7 +26,7 @@ As a user, I should be able to...
 
 * click a button to see reset the board so I can play again.
 
-##PseudoCode
+##Pseudocode
 ###Day 1
 * Make a 4 x 4 empty table.
 
