@@ -1,8 +1,15 @@
-#Memory Game#
+#Memory Game
 
+##How to Play
+1. Click on a square to see its picture.
+- Click on another square to find a matching picture.
+- If the pictures match, the pictures will disappear.
+- If the pictures do not match, the pictures will flip over and you can try again to find another two matching pair.
+- At the end, you will be given the number of total clicks it took you to finish the game. 
 
-
-
+##PseudoCode
+1. Make a 4x4 empty table.
+2.
 
 
 
@@ -21,7 +28,7 @@ As a user, I should be able to...
 * tell the difference between an available card I can click and an empty spot
 * see my cards that do not match flip over again.
 * click on a card that was clicked before but was not matched so that I can try to match it again.
-* see a tally at the end with the number of clicks it took me to win the game. 
+* see a tally at the end with the number of clicks it took me to win the game.
 
 
 
