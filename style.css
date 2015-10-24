@@ -23,3 +23,7 @@ td {
   height: 150px;
   border: solid 1px black;
 }
+
+img {
+  width: 100%;
+}
