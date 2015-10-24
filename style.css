@@ -1,0 +1,23 @@
+body {
+margin: 0;
+padding: 0;
+border: 0;
+}
+
+h1 {
+  text-align: center;
+}
+table {
+  border: solid 1px black;
+  width: 90%;
+  border-collapse: collapse;
+}
+
+tr {
+  border: solid 1px black;
+}
+
+td {
+  width: 25%;
+  border: solid 1px black;
+}
