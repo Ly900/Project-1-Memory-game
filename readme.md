@@ -2,14 +2,14 @@
 
 ##How to Play
 1. Click on a square to see its picture.
-- Click on another square to find a matching picture.
-- If the pictures match, the pictures will disappear.
-- If the pictures do not match, the pictures will flip over and you can try again to find another two matching pair.
-- At the end, you will be given the number of total clicks it took you to finish the game. 
+2. Click on another square to find a matching picture.
+3. If the pictures match, the pictures will disappear.
+4. If the pictures do not match, the pictures will flip over and you can try again to find another two matching pair.
+5. At the end, you will be given the number of total clicks it took you to finish the game.
 
 ##PseudoCode
-1. Make a 4x4 empty table.
-2.
+*1. Make a 4 x 4 empty table.*
+- Attach   
 
 
 
