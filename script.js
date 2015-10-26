@@ -1,31 +1,18 @@
 $(document).ready(function() {
 
 $("img").hide();
+var clickedCards = [];
 
 function findMatch () {
-  var image1;
+  var image;
   $("td").click(function () {
-  image1 = $(this).find("img").show().attr("src");
-  console.log(image1);
+  image = $(this).find("img").show().attr("src");
+  clickedCards.push(image)
+  console.log(clickedCards)
   $(this).off();
   });
-
-  var image2;
-  $("td").click(function () {
-  image2 = $(this).find("img").show().attr("src");
-  console.log(image2);
-  $(this).off();
-  });
-
 }; //ends function findMatch
 
-
-//   function compareImages() {
-//     if (image1 == image2) {
-//       console.log("You've got a match!");
-//     }
-//   }
-// } //ends function findMatch
 findMatch();
 
 }); //ends ready method
