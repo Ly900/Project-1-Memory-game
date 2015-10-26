@@ -7,8 +7,13 @@ border: 0;
 h1 {
   text-align: center;
 }
+
+ol {
+  margin-bottom: 20px;
+}
+
 table {
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   border: solid 1px black;
   width: 900px;
   border-collapse: collapse;

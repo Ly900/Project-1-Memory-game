@@ -39,22 +39,20 @@ As a user, I should be able to...
 
 * Remove click capability from cells that already had matched pictures.
 
-###Day 3
 * If the two pictures do not match, the cards should be hidden again.
 
 * The player should not be able to click on these cells again.
 
 * Once there are no cards left, the player should receive a message that the game is over.
 
-###Day 4  
+###Day 3
 * A counter shown on the page should let the player know how many clicks it took him/her to win the game.     
 
 * Final styling, any other features
 
 ##Other To Do Items
 
-###Day 5
-* Run code through HTML and CSS through validators
+* Run code through HTML and CSS through validators.
 
 * Figure out Github pages and how to host, push page, etc.
 
