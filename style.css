@@ -6,7 +6,9 @@ font-family: 'Muli', sans-serif;
 }
 
 #gameInfo {
-  margin-left: 10px;
+  padding-left: 10px;
+  border-bottom: solid 3px #F1BDBC;
+  margin-bottom: 10px;
 }
 h1 {
   text-align: center;
@@ -42,6 +44,10 @@ button {
 button:hover {
   background-color: #FFF2F2;
   border-radius: 5px;
+}
+
+button:active {
+  background-color: #F38F8C;
 }
 
 p {
