@@ -44,6 +44,10 @@ button:hover {
   border-radius: 5px;
 }
 
+span {
+  margin-left: 10px;
+}
+
 ol {
   margin-bottom: 20px;
 }
