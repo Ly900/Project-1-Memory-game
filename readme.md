@@ -14,7 +14,7 @@ As a user, I should be able to...
 
 * click on a second card and have a picture pop up so I can see what my second card is.
 
-* see my matching cards automatically disappear so I could know that I've made a match.
+* my matching cards stay turned up so I could know that I've made a match.
 
 * tell the difference between an available card I can click and an empty spot
 
@@ -54,7 +54,7 @@ As a user, I should be able to...
 
 * Run code through HTML and CSS through validators.
 
-* Figure out Github pages and how to host, push page, etc.
+* Figure out Github pages and how to host, push page, etc. 
 
 
 

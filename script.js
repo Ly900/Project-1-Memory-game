@@ -9,7 +9,8 @@ function resetGame () {
   $("img").hide();
   var clickedCards = [];
   var clickCounter = 0;
-}
+  $("#clickNumber").html(clickCounter);
+} 
 
 $("#resetButton").on("click", resetGame);
 
