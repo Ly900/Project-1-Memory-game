@@ -13,6 +13,8 @@ $("td").click(function () {
     var image = $(this).find("img");
     image.show();
     clickedCards.push(image);
+    image.click(false);
+
     if (clickCounter % 2 !== 0) {
       if (clickedCards[0][0].getAttribute("src") == clickedCards[1][0].getAttribute("src")) {
       console.log("match");
