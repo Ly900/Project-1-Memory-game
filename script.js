@@ -11,7 +11,7 @@ function resetGame () {
   var clickCounter = 0;
 }
 
-$(".button").on("click", resetGame);
+$("#resetButton").on("click", resetGame);
 
 $("td").click(function () {
     var image = $(this).find("img");
@@ -40,6 +40,7 @@ $("td").click(function () {
       }
     } //ends if clickCount is odd
     clickCounter++;
+    $("#clickNumber").html(clickCounter);
     console.log(clickCounter);
   })
 

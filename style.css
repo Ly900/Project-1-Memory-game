@@ -44,8 +44,9 @@ button:hover {
   border-radius: 5px;
 }
 
-span {
+p {
   margin-left: 10px;
+  display: inline-block;
 }
 
 ol {
