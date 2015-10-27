@@ -9,6 +9,9 @@ function resetGame () {
   clickedCards = [];
   var clickCounter = 0;
 }
+
+$(".button").on("click", resetGame);
+
 $("td").click(function () {
     var image = $(this).find("img");
     image.show();
@@ -22,10 +25,10 @@ $("td").click(function () {
       }
       else {
         console.log("don't match");
-        var image1 = ($(clickedCards[0]));
-        var image2 = ($(clickedCards[1]));
-        image1.fadeOut(2000);
-        image2.fadeOut(2000);
+        image1 = ($(clickedCards[0]));
+        image2 = ($(clickedCards[1]));
+        setTimeout("image1.fadeOut()", 1000);
+        setTimeout("image2.fadeOut()", 1000);
         clickedCards = [];
       }
     } //ends if clickCount is odd

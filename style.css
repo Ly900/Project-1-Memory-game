@@ -8,6 +8,12 @@ h1 {
   text-align: center;
 }
 
+.button {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 ol {
   margin-bottom: 20px;
 }
@@ -25,7 +31,6 @@ tr {
 }
 
 td {
-  /*width: 25%;*/
   width: 75px;
   height: 165px;
   border: solid 1px black;
