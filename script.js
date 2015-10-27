@@ -27,7 +27,7 @@ $("td").click(function () {
       clickedCards = [];
       correctPairs++;
         if (correctPairs === 8) {
-          console.log("You've won the game!")
+          alert("You've won the game!")
         }
       }
       else {
@@ -36,7 +36,7 @@ $("td").click(function () {
         image2 = ($(clickedCards[1]));
         setTimeout("image1.fadeOut()", 1000);
         setTimeout("image2.fadeOut()", 1000);
-        clickedCards = []; 
+        clickedCards = [];
       }
     } //ends if clickCount is odd
     clickCounter++;
