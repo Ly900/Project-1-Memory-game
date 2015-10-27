@@ -4,7 +4,11 @@ $("img").hide();
 clickedCards = [];
 var clickCounter = 0;
 // at clickCounter = 0 and even numbers, nothing happens
-
+function resetGame () {
+  $("img").hide();
+  clickedCards = [];
+  var clickCounter = 0;
+}
 $("td").click(function () {
     var image = $(this).find("img");
     image.show();
@@ -16,13 +20,14 @@ $("td").click(function () {
       }
       else {
         console.log("don't match");
-        ($(clickedCards[0])).hide();
-        ($(clickedCards[1])).hide();
+        var image1 = ($(clickedCards[0]));
+        var image2 = ($(clickedCards[1]));
+        image1.fadeOut(2000);
+        image2.fadeOut(2000);
         clickedCards = [];
       }
     } //ends if clickCount is odd
     clickCounter++;
-
   })
 
 
