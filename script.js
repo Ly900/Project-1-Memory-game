@@ -3,10 +3,11 @@ $(document).ready(function() {
 $("img").hide();
 clickedCards = [];
 var clickCounter = 0;
-// at clickCounter = 0 and even numbers, nothing happens
+var correctPairs = 0;
+
 function resetGame () {
   $("img").hide();
-  clickedCards = [];
+  var clickedCards = [];
   var clickCounter = 0;
 }
 
@@ -19,9 +20,15 @@ $("td").click(function () {
     image.click(false);
 
     if (clickCounter % 2 !== 0) {
-      if (clickedCards[0][0].getAttribute("src") == clickedCards[1][0].getAttribute("src")) {
+      var card1 = clickedCards[0][0].getAttribute("src");
+      var card2 = clickedCards[1][0].getAttribute("src");
+      if (card1 == card2 ) {
       console.log("match");
       clickedCards = [];
+      correctPairs++;
+        if (correctPairs === 8) {
+          console.log("You've won the game!")
+        }
       }
       else {
         console.log("don't match");
@@ -33,6 +40,7 @@ $("td").click(function () {
       }
     } //ends if clickCount is odd
     clickCounter++;
+    console.log(clickCounter);
   })
 
 
