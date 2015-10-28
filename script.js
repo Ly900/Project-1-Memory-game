@@ -78,8 +78,9 @@ function compareCards () {
         // $(card1).fadeOut(), 7000;
         // $(card2).fadeOut(), 7000;
         console.log("they don't match");
-
-        clickedCards = [];
+        $(clickedCards[0][0]).hide();
+        $(clickedCards[1][0]).hide();
+        clickedCards = []; 
       } // ends else for matching
     } //ends if odd condition
     clickCounter++;
