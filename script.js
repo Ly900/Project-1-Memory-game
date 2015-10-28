@@ -32,7 +32,7 @@ function shuffle(o){
 }
 
 function resetGame () {
-  shuffle(allCards);
+  // shuffle(allCards);
   dealCards();
   $("img").hide();
   $("#clickNumber").html(clickCounter);
@@ -45,54 +45,50 @@ function dealCards () {
     $(imageDiv).appendTo($("#cardsContainer"));
     $(imageDiv).find("img").attr("src", value);
   })
-  openCard();
+  openFirst();
 }
 
-function openCard () {
+function openFirst () {
   $("#cardsContainer").on("click", function () {
     console.log(clickCounter)
     var image = $(event.target).find("img");
     image.show();
     clickedCards.push(image);
     image.click(false);
-    if (clickCounter % 2 !== 0) {
-      card1 = clickedCards[0][0];
-      card2 = clickedCards[1][0];
-      if (card1 == card2 ) {
-        console.log("match");
-        // clickedCards = [];
-        correctPairs++;
-      }
-    } //ends if odd condition
-    clickCounter++;
+    compareCards();
   }) // ends onclick on container
-
 } // ends openCard function
 
-    //
-    //
-    //
-    //
-    //
-    //   if (correctPairs === 8) {
-    //     alert("You've won the game!")
-    //   }
-    // }
-    // else {
-    //   console.log("don't match");
-    //   image1 = clickedCards[0][0];
-    //   image2 = clickedCards[[1][0];
-    //   setTimeout("image1.fadeOut()", 1000);
-    //   setTimeout("image2.fadeOut()", 1000);
-    //   clickedCards = [];
-  //   }
-  // } // ends if clickCount is odd
+function compareCards () {
+    if (clickCounter % 2 !== 0) {
+      console.log("odd click");
+      card1 = $(clickedCards[0][0]).attr("src");
+      card2 = $(clickedCards[1][0]).attr("src");
+      if (card1 == card2) {
+        console.log(card1);
+        console.log(card2);
+        console.log("they match");
+        clickedCards = [];
+      } // ends if they match
+    //     correctPairs++;
+    //     if (correctPairs === 8) {
+    //       alert("You've won the game!")
+    //     } // ends correctPairs
+      else {
+        $(card1).fadeOut(), 7000;
+        $(card2).fadeOut(), 7000;
+        clickedCards = [];
+      } // ends else for matching
+    } //ends if odd condition
+    clickCounter++;
+} // ends compareCards function
 
-//   clickCounter++;
+
+
+
+
+
 //   $("#clickNumber").html(clickCounter);
-//   console.log(clickCounter);
-//
 
-// } //ends function checkCard
 
 }); //ends ready method
