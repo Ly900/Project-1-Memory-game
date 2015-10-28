@@ -75,8 +75,10 @@ function compareCards () {
     //       alert("You've won the game!")
     //     } // ends correctPairs
       else {
-        $(card1).fadeOut(), 7000;
-        $(card2).fadeOut(), 7000;
+        // $(card1).fadeOut(), 7000;
+        // $(card2).fadeOut(), 7000;
+        console.log("they don't match");
+
         clickedCards = [];
       } // ends else for matching
     } //ends if odd condition
