@@ -50,21 +50,23 @@ function dealCards () {
 
 function openCard () {
   $("#cardsContainer").on("click", function () {
-    clickCounter++;
     console.log(clickCounter)
     var image = $(event.target).find("img");
     image.show();
     clickedCards.push(image);
     image.click(false);
-    // if (clickCounter % 2 !== 0) {
-    //   var card1 = clickedCards[0][0];
-    //   var card2 = clickedCards[1][0];
-    //   if (card1 == card2 ) {
-    //     console.log("match");
-    //     clickedCards = [];
-    //     correctPairs++;
-    // }
-  }) // ends onclick on COntainer
+    if (clickCounter % 2 !== 0) {
+      card1 = clickedCards[0][0];
+      card2 = clickedCards[1][0];
+      if (card1 == card2 ) {
+        console.log("match");
+        // clickedCards = [];
+        correctPairs++;
+      }
+    } //ends if odd condition
+    clickCounter++;
+  }) // ends onclick on container
+
 } // ends openCard function
 
     //
