@@ -50,34 +50,21 @@ button:active {
   background-color: #F38F8C;
 }
 
-p {
-  margin-left: 10px;
-  display: inline-block;
-}
-
-ol {
-  margin-bottom: 20px;
-}
-
-table {
+#cardsContainer {
   margin: 0 auto 20px auto;
-  border: 10px;
+  border: 10px solid black;
   width: 900px;
-  border-collapse: collapse;
 }
 
-td {
-  width: 50px;
-  height: 165px;
-  border: 5px white solid;
-  background-color: #FF6562;
-  border-radius: 15px;
+div.imageDiv {
+  height: 150px;
 }
+
 td:hover {
   background-color: #F77B78;
 }
 
-img {
+/*img {
   margin: 0;
   border: 0;
   padding: 0;
@@ -85,4 +72,4 @@ img {
   height: 160px;
   border-radius: 15px;
   box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-}
+}*/
