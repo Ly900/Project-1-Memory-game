@@ -21,10 +21,12 @@ var allCards = [
 
 clickedCards = [];
 
-resetGame();
+dealCards();
 
 var clickCounter = 0;
 var correctPairs = 0;
+
+$("#resetButton").on("click", resetGame);
 
 function shuffle(o){
     for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -32,11 +34,10 @@ function shuffle(o){
 }
 
 function resetGame () {
-  // shuffle(allCards);
-  dealCards();
-  $("img").hide();
+  clickCounter = 0;
   $("#clickNumber").html(clickCounter);
-  $("#resetButton").on("click", resetGame);
+  dealCards();
+  shuffle(allCards);
 }
 
 function dealCards () {
@@ -45,7 +46,8 @@ function dealCards () {
     $(imageDiv).appendTo($("#cardsContainer"));
     $(imageDiv).find("img").attr("src", value);
   })
-  openFirst();
+    $("img").hide();
+    openFirst();
 }
 
 function openFirst () {
@@ -69,29 +71,22 @@ function compareCards () {
         console.log(card2);
         console.log("they match");
         clickedCards = [];
+        correctPairs++;
+        console.log("Correct Pairs = " + correctPairs);
+        if (correctPairs === 8) {
+          alert("You've won the game!")
+        } // ends correctPairs
       } // ends if they match
-    //     correctPairs++;
-    //     if (correctPairs === 8) {
-    //       alert("You've won the game!")
-    //     } // ends correctPairs
       else {
-        // $(card1).fadeOut(), 7000;
-        // $(card2).fadeOut(), 7000;
         console.log("they don't match");
-        $(clickedCards[0][0]).hide();
-        $(clickedCards[1][0]).hide();
-        clickedCards = []; 
+        $(clickedCards[0]).fadeOut(2000);
+        $(clickedCards[1]).fadeOut(2000);
+        clickedCards = [];
       } // ends else for matching
     } //ends if odd condition
     clickCounter++;
+    $("#clickNumber").html(clickCounter);
 } // ends compareCards function
-
-
-
-
-
-
-//   $("#clickNumber").html(clickCounter);
 
 
 }); //ends ready method
