@@ -8,6 +8,14 @@ allCards = [
 "images/cat-crosseyed.jpg",
 "images/cat-green-ears.jpg",
 "images/grumpy-cat.jpg",
+"images/cat-with-glasses.jpg",
+"images/annoyed-cat.jpg",
+"images/cat-bathing.jpg",
+"images/cat-tongue.jpg",
+"images/cat-wig.jpg",
+"images/cat-crosseyed.jpg",
+"images/cat-green-ears.jpg",
+"images/grumpy-cat.jpg",
 "images/cat-with-glasses.jpg"
 ];
 
@@ -17,7 +25,11 @@ allCards = [
 // var correctPairs = 0;
 
 $.each(allCards, function (index, value) {
-  $("<div class='imageDiv'><img></img></div>").find("img").attr("src", value).appendTo("#cardsContainer");
+  var imageDiv = $("<div class='imageDiv'><img></img></div>");
+
+  $(imageDiv).appendTo($("#cardsContainer"));
+
+  $(imageDiv).find("img").attr("src", value);
 })
 
 
