@@ -19,7 +19,7 @@ allCards = [
 "images/cat-with-glasses.jpg"
 ];
 
-// $("img").hide();
+
 // clickedCards = [];
 // var clickCounter = 0;
 // var correctPairs = 0;
@@ -31,7 +31,7 @@ $.each(allCards, function (index, value) {
 
   $(imageDiv).find("img").attr("src", value);
 })
-
+// $("img").hide(); 
 
 // function resetGame () {
 //   $("img").hide();
