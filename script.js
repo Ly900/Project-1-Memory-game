@@ -10,7 +10,7 @@ function resetGame () {
   var clickedCards = [];
   var clickCounter = 0;
   $("#clickNumber").html(clickCounter);
-} 
+}
 
 $("#resetButton").on("click", resetGame);
 
@@ -44,18 +44,5 @@ $("td").click(function () {
     $("#clickNumber").html(clickCounter);
     console.log(clickCounter);
   })
-
-
-
-//   compareCards();
-// }; //ends function findMatch
-//
-// function compareCards () {
-//   while (clickedCards === !"") {
-//
-//   } //ends while loop
-// } //ends compareCards function
-
-
 
 }); //ends ready method
