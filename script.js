@@ -50,48 +50,47 @@ function dealCards () {
 
 function openCard () {
   $("#cardsContainer").on("click", function () {
+    clickCounter++;
+    console.log(clickCounter)
     var image = $(event.target).find("img");
     image.show();
     clickedCards.push(image);
     image.click(false);
-  })
-  checkCard(); 
-}
-//
-function checkCard() {
-  if (clickCounter % 2 !== 0) {
-    var card1 = clickedCards[0][0];
-    var card2 = clickedCards[1][0];
-//     if (card1 == card2 ) {
-//     console.log("match");
-//     clickedCards = [];
-//     correctPairs++;
-//       if (correctPairs === 8) {
-//         alert("You've won the game!")
-//       }
-//     }
-//     else {
-//       console.log("don't match");
-//       image1 = clickedCards[0][0];
-//       image2 = clickedCards[[1][0];
-//       setTimeout("image1.fadeOut()", 1000);
-//       setTimeout("image2.fadeOut()", 1000);
-//       clickedCards = [];
-//     }
-//   } // ends if clickCount is odd
+    if (clickCounter % 2 !== 0) {
+      var card1 = clickedCards[0][0];
+      var card2 = clickedCards[1][0];
+      if (card1 == card2 ) {
+        console.log("match");
+        clickedCards = [];
+        correctPairs++;
+    }
+  }) // ends onclick on COntainer
+} // ends openCard function
+
+    //
+    //
+    //
+    //
+    //
+    //   if (correctPairs === 8) {
+    //     alert("You've won the game!")
+    //   }
+    // }
+    // else {
+    //   console.log("don't match");
+    //   image1 = clickedCards[0][0];
+    //   image2 = clickedCards[[1][0];
+    //   setTimeout("image1.fadeOut()", 1000);
+    //   setTimeout("image2.fadeOut()", 1000);
+    //   clickedCards = [];
+  //   }
+  // } // ends if clickCount is odd
+
 //   clickCounter++;
 //   $("#clickNumber").html(clickCounter);
 //   console.log(clickCounter);
-
-//   compareCards();
-// }; //ends function findMatch
 //
-// function compareCards () {
-//   while (clickedCards === !"") {
-//
-//   } //ends while loop
-// } //ends compareCards function
 
-
+// } //ends function checkCard
 
 }); //ends ready method
