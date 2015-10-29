@@ -19,38 +19,40 @@ var allCards = [
 "images/cat-with-glasses.jpg"
 ];
 
-clickedCards = [];
-
-dealCards();
-
-var clickCounter = 0;
-var correctPairs = 0;
-
-$("#resetButton").on("click", resetGame);
-
 function shuffle(o){
     for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
 }
 
-function resetGame () {
-  clickCounter = 0;
-  $("#clickNumber").html(clickCounter);
-  dealCards();
+startGame();
+
+function startGame () {
   shuffle(allCards);
+  clickCounter = 0;
+  correctPairs = 0;
+  clickedCards = [];
+  $("#clickNumber").html(clickCounter);
+  console.log("Correct Pairs = " + correctPairs);
+  console.log("Click Counter = " + clickCounter);
+  console.log(clickedCards);
+  $("#resetButton").on("click", function () {
+    location.reload();
+  });
+  dealCards();
 }
 
 function dealCards () {
+
   $.each(allCards, function (index, value) {
     var imageDiv = $("<div class='imageDiv'><img></img></div>");
     $(imageDiv).appendTo($("#cardsContainer"));
     $(imageDiv).find("img").attr("src", value);
   })
     $("img").hide();
-    openFirst();
+    openCard();
 }
 
-function openFirst () {
+function openCard () {
   $("#cardsContainer").on("click", function () {
     console.log(clickCounter)
     var image = $(event.target).find("img");
@@ -63,12 +65,9 @@ function openFirst () {
 
 function compareCards () {
     if (clickCounter % 2 !== 0) {
-      console.log("odd click");
-      card1 = $(clickedCards[0][0]).attr("src");
-      card2 = $(clickedCards[1][0]).attr("src");
+    card1 = $(clickedCards[0][0]).attr("src");
+    card2 = $(clickedCards[1][0]).attr("src");
       if (card1 == card2) {
-        console.log(card1);
-        console.log(card2);
         console.log("they match");
         clickedCards = [];
         correctPairs++;
@@ -83,10 +82,11 @@ function compareCards () {
         $(clickedCards[1]).fadeOut(2000);
         clickedCards = [];
       } // ends else for matching
-    } //ends if odd condition
+    } //ends if even condition
     clickCounter++;
     $("#clickNumber").html(clickCounter);
 } // ends compareCards function
+
 
 
 }); //ends ready method
