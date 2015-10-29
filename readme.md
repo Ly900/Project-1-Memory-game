@@ -24,7 +24,7 @@ As a user, I should be able to...
 
 * see a tally at the end with the number of clicks it took me to win the game.
 
-* click a button to see reset the board so I can play again.
+* click a button to reset the board so I can play again.
 
 ##Pseudocode Plans
 ###Day 1
@@ -54,7 +54,7 @@ As a user, I should be able to...
 
 * Run code through HTML and CSS through validators.
 
-* Figure out Github pages and how to host, push page, etc. 
+* Figure out Github pages and how to host, push page, etc.
 
 
 
