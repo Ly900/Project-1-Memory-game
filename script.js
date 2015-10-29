@@ -85,13 +85,7 @@ function compareCards () {
     } //ends if even condition
     clickCounter++;
     $("#clickNumber").html(clickCounter);
-<<<<<<< HEAD
-    console.log(clickCounter);
-  })
-=======
+
 } // ends compareCards function
-
-
->>>>>>> feature
 
 }); //ends ready method
