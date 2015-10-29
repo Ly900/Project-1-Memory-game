@@ -24,24 +24,22 @@ As a user, I should be able to...
 
 * see a tally at the end with the number of clicks it took me to win the game.
 
-* click a button to see reset the board so I can play again.
+* click a button to reset the board so I can play again.
 
 ##Pseudocode Plans
 ###Day 1
-* Make a 4 x 4 empty table.
+* Make a 4 x 4 empty table (in this newer version, dynamically created divs using indices in array).
 
-* Attach a hidden picture to each cell.  
+* Attach a hidden picture to each cell (images are inserted in divs).  
 
 * Add a click event to each cell so that it shows the picture when it is clicked on.
 
 ###Day 2
-* If two pictures match, the pictures are hidden again.
+* If two pictures match, the pictures are stay up.
 
 * Remove click capability from cells that already had matched pictures.
 
 * If the two pictures do not match, the cards should be hidden again.
-
-* The player should not be able to click on these cells again.
 
 * Once there are no cards left, the player should receive a message that the game is over.
 
@@ -54,7 +52,7 @@ As a user, I should be able to...
 
 * Run code through HTML and CSS through validators.
 
-* Figure out Github pages and how to host, push page, etc. 
+* Figure out Github pages and how to host, push page, etc.
 
 
 
