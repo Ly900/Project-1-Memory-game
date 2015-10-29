@@ -3,7 +3,7 @@
 ##How to Play
 1. Click on a square to see its picture.
 2. Click on another square to find a matching picture.
-3. If the pictures match, the pictures will disappear.
+3. If the pictures match, the pictures will stay flipped up.
 4. If the pictures do not match, the pictures will flip over and you can try again to find another two matching pair.
 5. At the end, you will be given the number of total clicks it took you to finish the game.
 
