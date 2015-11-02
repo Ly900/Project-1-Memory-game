@@ -8,16 +8,20 @@ var correctPairs = 0;
 function resetGame () {
   $("img").hide();
   var clickedCards = [];
+  // this is the reason that the reset function doesn't reset the click counter. What happens when we use the var keyword in the scope of a function?
   var clickCounter = 0;
   $("#clickNumber").html(clickCounter);
-} 
+}
 
 $("#resetButton").on("click", resetGame);
 
 $("td").click(function () {
+  // nice use of this to find the image associated with the click.
     var image = $(this).find("img");
     image.show();
     clickedCards.push(image);
+    // oh! this is really cool, didn't know you could do this, this is how you added functionality to not be able to click the same card.
+    // what happens if i click a picture, than click the reset button? This is a bug you could hash out later.
     image.click(false);
 
     if (clickCounter % 2 !== 0) {
@@ -46,7 +50,7 @@ $("td").click(function () {
   })
 
 
-
+// remember to take out any extra code that isn't being used in the application when you move to production. I do like that you want to abstract some of the functionality out of the click event
 //   compareCards();
 // }; //ends function findMatch
 //
