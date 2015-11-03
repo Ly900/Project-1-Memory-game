@@ -1,5 +1,6 @@
+// make sure you comment your code!
 $(document).ready(function() {
-
+// would renmae this to imageUrls or something. Even better instead of a string, create an object for each card, then you can have as many key value pairs as you want to define your object
 var allCards = [
 "images/annoyed-cat.jpg",
 "images/cat-bathing.jpg",
@@ -27,6 +28,7 @@ function shuffle(o){
 startGame();
 
 function startGame () {
+  // using global variables can be dangerous. When we get a little bit more experience with scope/context/clousures we'll see better ways to eliminate global variables and encapsulate this into objects
   shuffle(allCards);
   clickCounter = 0;
   correctPairs = 0;
@@ -44,6 +46,7 @@ function startGame () {
 function dealCards () {
 
   $.each(allCards, function (index, value) {
+    // i like your use of the each method to iterate through your strings
     var imageDiv = $("<div class='imageDiv'><img></img></div>");
     $(imageDiv).appendTo($("#cardsContainer"));
     $(imageDiv).find("img").attr("src", value);
@@ -64,11 +67,15 @@ function openCard () {
 } // ends openCard function
 
 function compareCards () {
+  // what happens if i click the same picture twice?
     if (clickCounter % 2 !== 0) {
+    // is the below variable pointing to a card? or an image src of a card?
     card1 = $(clickedCards[0][0]).attr("src");
     card2 = $(clickedCards[1][0]).attr("src");
       if (card1 == card2) {
         console.log("they match");
+        // i don't think this is absolutely neccessary, you might be able to get rid of this line, and update the comparison to be the last two cards in the array
+        // also in this way you can get a history of all user clicks as an ordered list.
         clickedCards = [];
         correctPairs++;
         console.log("Correct Pairs = " + correctPairs);
